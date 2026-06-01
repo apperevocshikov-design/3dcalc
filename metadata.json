@@ -1,0 +1,6 @@
+{
+  "name": "3D Print Calculator",
+  "description": "A comprehensive 3D printing cost calculator and estimator. Supports STL and GCODE parsing, customizable materials, electricity, print time amortization, and generating customer receipts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
