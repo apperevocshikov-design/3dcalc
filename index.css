@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@media print {
+  /* Hide the rest of the application interface during printing */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  /* Make only the receipt card visible and cover the whole sheet */
+  #printable-receipt-card, #printable-receipt-card * {
+    visibility: visible;
+  }
+  #printable-receipt-card {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* Make sure printing looks clean and high contrast */
+  .bg-slate-50 {
+    background-color: #f8fafc !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .bg-blue-50 {
+    background-color: #eff6ff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .text-blue-600 {
+    color: #2563eb !important;
+  }
+}
