@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - master # Поддерживает запуск из любой ветки (main или master)
+      - master # Support either default branch
 
 permissions:
   contents: read
@@ -29,10 +29,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci || npm install
 
       - name: Build
         run: npm run build
